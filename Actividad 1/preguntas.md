@@ -1,3 +1,4 @@
+# ACTIVIDAD 1 - PREGUNTAS
 ## 1. Por qué surgió la necesidad de DevOps en el desarrollo de software?
 
 DevOps surgió para dar un enfoque laboral más interactivo, haciendo que diferentes partes de un equipo deban colaborar entre ellas para poder progresar de manera efectiva, mejorando la comunicación entre partes y haciendo que el desarrollo del software deje de estar aislado en cada equipo.
