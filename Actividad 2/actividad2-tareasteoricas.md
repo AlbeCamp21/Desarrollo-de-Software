@@ -17,6 +17,7 @@
 ## 2. Proponer la estructura de archivos y directorios para un proyecto hipotético que incluya tres módulos: `network`, `database` y `application`. Justificar la jerarquía elegida.
 
 **Estructura:**
+
 <img src="../Imagenes/arbol software.png" width="560">
 
 **Justificación:** La estructura que se muestra en la imagen es una estructura de ejemplo AWS CloudFormation, dicha estructura nos muestra una organización modular y segmentada, lo que nos resulta ventajoso si es que buscamos flexibilidad y reutilización en los despliegues. Las secciones que vemos son:
