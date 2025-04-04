@@ -27,6 +27,7 @@ Este ejercicio nos permite explorar los commits y su historial, además de cómo
 <img src="../Imagenes/ejer2_1.jpg" width="560">
 
 **Examina las diferencias introducidas en cada commit. ¿Qué cambios fueron realizados en cada uno?**
+
 En la imagen podemos ver algunos commits que se hizo en el repositorio, los últimos commits fueron hechos en el ejercicio anterior. En la imagen podemos notar como cada commit tiene un hash diferente, además nos muestra el autor que los realizó (mi persona), la fecha y el mensaje que se pone en cada commit para indicar que se hizo.
 
 ### 2. Filtrar commits por autor:
@@ -43,6 +44,7 @@ En la imagen podemos ver algunos commits que se hizo en el repositorio, los últ
 <img src="../Imagenes/ejer2_5.jpg" width="560">
 
 **Reflexiona sobre cómo el historial de tu proyecto se visualiza en este formato. ¿Qué información adicional puedes inferir?**
+
 Debido a que se uso la opción --graph, podemos ver la lista de commits de una forma más agradable, organizada. Se observa los primeros commits que se hizo de otras actividades, también una rama distinta a main, que es advanced-feature.
 Se ven varias actividade que se hicieron en el proyecto, por ejemplo actualizaciones, creaciones o eliminaciones de archivo. Por último vemos un merge, lo cual indica que hubo una unión entre dos branchs
 
