@@ -101,16 +101,16 @@ Ejercicio importante ya que simularemos como si estuviéramos en una organizaci�
 ## Ejercicio 6: Cherry-Picking y Git Stash
 En este último ejercicio aprenderemos sobre `git cherry-pick` y cómo podemos almacenar cambios no confirmados de manera temporal.
 ### 1. Hacer cambios en main.py y confirmarlos:
-<img src="../Imagenes/ejer5_6.jpg" width="560">
+<img src="../Imagenes/ejer6_1.jpg" width="560">
 
 ### 2. Crear una nueva rama y aplicar el commit específico:
-<img src="../Imagenes/ejer5_6.jpg" width="560">
+<img src="../Imagenes/ejer6_2.jpg" width="560">
 
 ### 3. Guardar temporalmente cambios no confirmados:
-<img src="../Imagenes/ejer5_6.jpg" width="560">
+<img src="../Imagenes/ejer6_3.jpg" width="560">
 
 ### 4. Aplicar los cambios guardados:
-<img src="../Imagenes/ejer5_6.jpg" width="560">
+<img src="../Imagenes/ejer6_4.jpg" width="560">
 
 ### 5. Revisar el historial y confirmar la correcta aplicación de los cambios:
-<img src="../Imagenes/ejer5_6.jpg" width="560">
+<img src="../Imagenes/ejer6_5.jpg" width="560">
