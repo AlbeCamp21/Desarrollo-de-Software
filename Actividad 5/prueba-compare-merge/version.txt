@@ -1,1 +1,2 @@
 Version 1.0
+Característica 1 agregada
