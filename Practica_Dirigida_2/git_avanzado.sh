@@ -43,6 +43,7 @@ function mostrar_menu_principal() {
     echo "10) Gestión de Hooks"
     echo "11) Salir"
     echo "12) Merge automatizado de una rama"  # Nueva opcion
+    echo "13) Generar reporte"  # Nueva opcion
     echo -n "Seleccione una opción: "
 }
 
@@ -405,6 +406,21 @@ function merge_automatizado() {
     git status
 }
 
+# 13. Generar reporte de estado del repo
+function generar_reporte() {
+    reporte="reporte_git.txt"  # Nombre del txt
+    echo "=== Reporte del Repositorio ===" > "$reporte"
+    echo -e "\n=== Estado del repositorio ===" >> "$reporte"
+    git status >> "$reporte" 2>&1  # Estado del repositorio
+    echo -e "\n=== Ramas existentes ===" >> "$reporte"
+    git branch >> "$reporte" 2>&1  # Lista de ramas
+    echo -e "\n=== Últimos 5 commits ===" >> "$reporte"
+    git log -n 5 --oneline >> "$reporte" 2>&1  # Ultimos 5 commits
+    echo -e "\n=== Lista de stashes ===" >> "$reporte"
+    git stash list >> "$reporte" 2>&1  # Stash
+    echo "Reporte generado. Puede ver el reporte en el archivo $reporte."
+}
+
 # Bucle principal del menú
 while true; do
     mostrar_menu_principal
@@ -446,6 +462,9 @@ while true; do
             ;;
         12)  # Nueva opcion
             merge_automatizado
+            ;;
+        13)  # Nueva opcion
+            generar_reporte
             ;;
         *)
             echo "Opción no válida, intente de nuevo."
