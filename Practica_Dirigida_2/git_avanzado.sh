@@ -403,7 +403,6 @@ function merge_automatizado() {
     echo ""
     echo "Estado actual del repositorio: "
     git status
-    ;;
 }
 
 # Bucle principal del menú
