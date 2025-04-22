@@ -99,6 +99,7 @@ function gestionar_ramas() {
         echo "c) Cambiar a una rama existente"
         echo "d) Borrar una rama"
         echo "e) Volver al menú principal"
+        echo "f) Renombrar una rama: "  # Creando la nueva opcion
         echo -n "Seleccione una opción: "
         read opcion_rama
         case "$opcion_rama" in
@@ -126,6 +127,14 @@ function gestionar_ramas() {
                 ;;
             e|E)
                 break
+                ;;
+            f|F)
+                echo -n "Ingrese el nombre de la rama a cambiar el nombre (solo ramas locales): "
+                read rama  # Nombre de la rama local
+                echo -n "Ingrese el nuevo nombre para la rama: "
+                read nuevo_nombre  # Nuevo nombre de la rama
+                git branch -m "$rama" "$nuevo_nombre"  # Ejecuta 'git branch -m'
+                echo "Rama '$rama' renombrada a '$nuevo_nombre'"
                 ;;
             *)
                 echo "Opción no válida, intente de nuevo."
