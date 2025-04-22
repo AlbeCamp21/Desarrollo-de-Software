@@ -364,9 +364,9 @@ function gestionar_hooks() {
                 break
                 ;;
             f|F)
-                echo "Instalando hook pre-commit para verificar documentación..."
-                hook_file="../.git/hooks/pre-commit"  # Ruta del hook
-                cat << 'EOF' > "$hook_file"  # Bloque heredoc
+                echo "Instalando hook pre-commit para verificar documentación"
+                archivo_hook="../.git/hooks/pre-commit"  # Ruta del hook
+                cat << EOF > "$archivo_hook"  # Bloque heredoc
 #!/bin/bash
 # Hook pre-commit para verificar documentación en funciones
 files=\$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.c$|\.h$|\.js$')
@@ -380,8 +380,7 @@ for file in \$files; do  # Trabaja con cada archivo
 done
 exit 0
 EOF
-                chmod +x "$hook_file"
-                echo "Commit realizado exitosamente."
+                chmod +x "$archivo_hook"
                 ;;
             *)
                 echo "Opción no válida, intente de nuevo."
