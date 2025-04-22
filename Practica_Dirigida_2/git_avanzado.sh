@@ -42,6 +42,7 @@ function mostrar_menu_principal() {
     echo "9) Gestión de git diff"
     echo "10) Gestión de Hooks"
     echo "11) Salir"
+    echo "12) Merge automatizado de una rama"  # Nueva opcion
     echo -n "Seleccione una opción: "
 }
 
@@ -389,6 +390,22 @@ EOF
     done
 }
 
+# 12. Merge automatizado de una rama
+function merge_automatizado() {
+    echo ""
+    echo "Ingrese el nombre de la rama a fusionar con la actual: "
+    read rama  # Rama que sera fusionada
+    if git merge -X theirs "$rama"; then  # Se quedan los cambios de rama
+        echo "Merge automatizado realizado correctamente"
+    else
+        echo "Hubo conflictos que no se pudo realizar automaticamente"
+    fi
+    echo ""
+    echo "Estado actual del repositorio: "
+    git status
+    ;;
+}
+
 # Bucle principal del menú
 while true; do
     mostrar_menu_principal
@@ -427,6 +444,9 @@ while true; do
         11)
             echo "Saliendo del script."
             exit 0
+            ;;
+        12)  # Nueva opcion
+            merge_automatizado
             ;;
         *)
             echo "Opción no válida, intente de nuevo."
