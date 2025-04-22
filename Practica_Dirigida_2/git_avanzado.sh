@@ -319,6 +319,7 @@ function gestionar_hooks() {
         echo "c) Editar un hook existente"
         echo "d) Borrar un hook"
         echo "e) Volver al menú principal"
+        echo "f) Instalar hook para verificar correcta documentacion"  # Nueva opcion
         echo -n "Seleccione una opción: "
         read opcion_hooks
         case "$opcion_hooks" in
@@ -361,6 +362,26 @@ function gestionar_hooks() {
                 ;;
             e|E)
                 break
+                ;;
+            f|F)
+                echo "Instalando hook pre-commit para verificar documentación..."
+                hook_file="../.git/hooks/pre-commit"  # Ruta del hook
+                cat << 'EOF' > "$hook_file"  # Bloque heredoc
+#!/bin/bash
+# Hook pre-commit para verificar documentación en funciones
+files=\$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.c$|\.h$|\.js$')
+for file in \$files; do  # Trabaja con cada archivo 
+    if [[ -f "\$file" ]]; then  # Verifica si existe el archivo
+        if ! grep -q "//" "\$file"; then  # Busca si hay '//'
+            echo "Error: El archivo '\$file' no contiene comentarios de documentación, commit cancelado."
+            exit 1
+        fi
+    fi
+done
+exit 0
+EOF
+                chmod +x "$hook_file"
+                echo "Commit realizado exitosamente."
                 ;;
             *)
                 echo "Opción no válida, intente de nuevo."
