@@ -1,4 +1,8 @@
 ﻿# ACTIVIDAD 7
+
+> **Repositorio**: La actividad 7 se trabajó en un repositorio aparte.
+> https://github.com/AlbeCamp21/Actividad7.git
+
 ### Creando directorio de trabajo y archivos necesarios
 
 <img src="../Imagenes/act7/intro_1.jpg" width="560">
