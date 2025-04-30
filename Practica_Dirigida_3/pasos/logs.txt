@@ -1,0 +1,4 @@
+Usuario: juansito@gmail.es ha iniciado sesión.
+Error con usuario rolando_123@uni.edu.pe
+Otro usuario: facultad_ciencias@uni.pe
+Email repetido: juansito@gmail.es
