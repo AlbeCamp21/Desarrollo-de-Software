@@ -14,7 +14,7 @@ Esta función es una _fixture_ de `pytest` que configura y limpia la base de dat
 
 #### Pytest
 
-<img src="../Imagenes/act12/paso1_1.jpg" width="560">
+<img src="../Imagenes/act12/paso1_2.jpg" width="560">
 
 No se muestra nada ya que aún no se implementan las pruebas.
 
