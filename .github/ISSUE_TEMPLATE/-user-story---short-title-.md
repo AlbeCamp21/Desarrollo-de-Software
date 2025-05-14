@@ -7,14 +7,22 @@ assignees: ''
 
 ---
 
-## User story
+*As a* (specific role – e.g., "developer," "admin," "customer")  
+*I need* (clear functionality or feature needed)  
+*So that* (explain the value or business reason for this feature)
 
-**As a** _(specific role - e.g., "developer," "admin," "customer")_
-**I need** _(clear functionality or feature needed)_
-**So that** _(explain the value or business reason for this feature)_
+---
 
---
+## *Context & Assumptions*
+- List any known constraints, assumptions, or dependencies.  
+- Mention related user stories or issues (if applicable).
 
-## **Content & Assumptions**
-- _List any know contraints, assumptions, or dependencies_
-- _Mention related user stories or issues (if applicable)_
+---
+
+## *Acceptance criteria*
+```gherkin
+Scenario: <Short Description>  
+Given <initial context or system state>  
+When <user performs an action>  
+Then <expected outcome or behavior>  
+And <optional additional conditions>
