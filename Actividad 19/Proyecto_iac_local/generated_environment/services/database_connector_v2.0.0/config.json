@@ -1,9 +1,9 @@
 {
-    "applicationName": "${app_name_tpl}",
-    "version": "${app_version_tpl}",
-    "listenPort": ${port_tpl},
-    "deploymentTime": "${deployed_at_tpl}",
-    "notes": "Este es un archivo de configuración autogenerado. ${message_tpl}",
+    "applicationName": "database_connector",
+    "version": "2.0.0",
+    "listenPort": 5432,
+    "deploymentTime": "2025-05-28T05:59:45Z",
+    "notes": "Este es un archivo de configuración autogenerado. Configuración gestionada por Terraform.",
     "settings": {
         "featureA": true,
         "featureB": false,
@@ -16,9 +16,9 @@
         ,"s16": "val16", "s17": "val17", "s18": "val18", "s19": "val19", "s20": "val20"
         ,"s21": "val21", "s22": "val22", "s23": "val23", "s24": "val24", "s25": "val25"
         ,"s26": "val26", "s27": "val27", "s28": "val28", "s29": "val29", "s30": "val30"
-    %{ if connection_string_tpl != "" }
+    
     ,
-    "connection_string": "${connection_string_tpl}"
-    %{ endif }
+    "connection_string": "postgres://postgres:secreto@localhost:5432/app_database"
+    
     }
 }

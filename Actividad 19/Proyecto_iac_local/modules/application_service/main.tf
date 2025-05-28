@@ -27,6 +27,7 @@ data "template_file" "app_config" {
     port_tpl        = var.app_port
     deployed_at_tpl = timestamp()
     message_tpl     = var.global_message_from_root
+    connection_string_tpl = "postgres://${var.db_user}:${var.db_password}@${var.db_host}:${var.db_port}/${var.db_name}"
   }
 }
 

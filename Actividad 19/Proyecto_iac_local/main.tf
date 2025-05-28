@@ -25,6 +25,7 @@ locals {
   common_app_config = {
     app1 = { version = "1.0.2", port = 8081 }
     app2 = { version = "0.5.0", port = 8082 }
+    database_connector = { version = "2.0.0", port = 5432, connection_string = "postgresql://user:pass@localhost:5432/dbname" }
     # Se pueden añadir más lineas
     # app3 = { version = "2.1.0", port = 8083 }
     # app4 = { version = "1.0.0", port = 8084 }
@@ -41,6 +42,12 @@ module "simulated_apps" {
   base_install_path        = "${path.cwd}/generated_environment/services"
   global_message_from_root = var.mensaje_global # Pasar la variable sensible
   python_exe               = var.python_executable
+  connection_string_tpl = try(each.value.connection_string, "")
+  db_user     = var.db_user
+  db_password = var.db_password
+  db_host     = var.db_host
+  db_port     = var.db_port
+  db_name     = var.db_name
 }
 
 output "detalles_apps_simuladas" {
